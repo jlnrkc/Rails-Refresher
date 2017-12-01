@@ -1,0 +1,17 @@
+
+<h1>List of Items</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @list_item.each do |list_item| %>
+    <tr>
+      <td><%= list_item.title %></td>
+      <td><%= list_item.text %></td>
+      <td><%= link_to 'Select', list_item_path(list_item) %></td>
+    </tr>
+  <% end %>
+</table>
